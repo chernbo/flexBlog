@@ -11,12 +11,12 @@ const data = {
       desc: "Make your standard systems smart with Siphome. A simple installation or integration and we can start to monitor 24/7 to make sure your home is Siphome.",
     },
     {
-      imagePath: "/image/icon1.svg",
+      imagePath: "/image/icon2.svg",
       title: "Monitor",
       desc: "Make your standard systems smart with Siphome. A simple installation or integration and we can start to monitor 24/7 to make sure your home is Siphome.",
     },
     {
-      imagePath: "/image/icon1.svg",
+      imagePath: "/image/icon3.svg",
       title: "Monitor",
       desc: "Make your standard systems smart with Siphome. A simple installation or integration and we can start to monitor 24/7 to make sure your home is Siphome.",
     },
@@ -43,7 +43,7 @@ export default function Home() {
             className={styles.second}
             src="/image/WechatIMG95.jpg"
             alt="update"
-            width={233}
+            width={253}
             height={320}
           />
           <Image
@@ -54,21 +54,46 @@ export default function Home() {
             height={300}
           />
         </div>
+        <Image
+          className={styles.dotBottom}
+          src="/image/dot_left.svg"
+          alt="dot"
+          width={120}
+          height={100}
+        />
       </div>
       <div className={styles.right}>
-        {data.iconDescList.map((item) => {
-          return (
-            <div className={styles.descCard}>
-              <div className={styles.icon1Content}>
-                <Image src={item.imagePath} alt="icon" width={30} height={30} />
-              </div>
-              <div className={styles.iconDesc}>
-                <p className={styles.iconDescTitle}>{item.title}</p>
-                <p className={styles.iconDescDescContent}>{item.desc}</p>
-              </div>
-            </div>
-          );
-        })}
+        <div className={styles.contentDotWrapper}>
+          <Image
+            className={styles.contentDotImage}
+            src="/image/dot_left.svg"
+            alt="dot"
+            width={120}
+            height={100}
+          />
+        </div>
+        <div className={styles.iconBar}>
+          <div className={styles.iconBarContent}>
+            {data.iconDescList.map((item) => {
+              return (
+                <div className={styles.descCard}>
+                  <div className={styles.icon1Content}>
+                    <Image
+                      src={item.imagePath}
+                      alt="icon"
+                      width={30}
+                      height={30}
+                    />
+                  </div>
+                  <div className={styles.iconDesc}>
+                    <p className={styles.iconDescTitle}>{item.title}</p>
+                    <p className={styles.iconDescDescContent}>{item.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

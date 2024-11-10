@@ -1,87 +1,114 @@
 .wrapper {
   display: flex;
   margin: 0 auto;
+
   width: 940px;
   height: 100vh;
   background-color: #eff2f5;
   border: 1px solid transparent;
+
   .left {
     margin-right: -200px;
+
+    .contentTitle {
+      margin-left: 120px;
+      margin-top: 48px;
+
+      .title {
+        color: #2053d1;
+        font-size: 10px;
+        letter-spacing: 10px;
+        font-weight: 900;
+      }
+
+      .titleDesc {
+        width: 320px;
+        height: 128px;
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    }
+
+    .contentImage {
+      display: flex;
+      width: 550px;
+      flex-wrap: wrap;
+      /* 嵌套写法 */
+      & img {
+        border-radius: 20px;
+      }
+      .second {
+        margin-top: 30px;
+        margin-left: 30px;
+        z-index: 1000;
+      }
+
+      .third {
+        margin-top: -208px;
+        z-index: 1001;
+      }
+    }
+
+    .dotBottom {
+      margin-top: -10px;
+      margin-left: -60px;
+      width: 200px;
+    }
   }
 
   .right {
-    width: 480px;
-    height: 690px;
-    /* 这里的百分比是针对width 还是 height */
-    border-bottom-left-radius: 20%;
-    background-color: #1b57c9;
-  }
-
-  .contentTitle {
-    margin-left: 120px;
-    margin-top: 48px;
-    .title {
-      color: #2053d1;
-      font-size: 10px;
-      letter-spacing: 10px;
-      font-weight: 900;
-    }
-    .titleDesc {
-      width: 320px;
-      height: 128px;
-      font-size: 28px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-  }
-
-  .contentImage {
     display: flex;
-    width: 550px;
-    flex-wrap: wrap;
-    /* 嵌套写法 */
-    & img {
-      border-radius: 20px;
-    }
-  }
-
-  .second {
-    margin-top: 30px;
-    margin-left: 30px;
-    z-index: 1000;
-  }
-
-  .third {
-    margin-top: -208px;
-    z-index: 1001;
-  }
-
-  .descCard {
-    display: flex;
-    width: 360px;
-    height: 150px;
-    color: white;
-    margin-left: 120px;
-    margin-top: 50px;
-    .icon1Content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 45px;
-      height: 45px;
-      background-color: #ffffff;
-      border-radius: 22.5px;
-    }
-    .iconDesc {
-      width: 310px;
-      margin-top: -8px;
-      margin-left: 15px;
-
-      .iconDescTitle {
-        font-size: 18px;
+    .contentDotWrapper {
+      width: 150px;
+      .contentDotImage {
+        position: relative;
+        margin-left: -10px;
+        margin-top: 140px;
       }
-      .iconDescDescContent {
-        font-size: 14px;
+      z-index: 600;
+    }
+
+    .iconBar {
+      width: 520px;
+      height: 690px;
+      z-index: 900;
+      margin-left: -80px;
+      /* 这里的百分比是针对width 还是 height */
+      border-bottom-left-radius: 20%;
+      background-color: #1b57c9;
+      .iconBarContent {
+        margin-left: 50px;
+        .descCard {
+          display: flex;
+          width: 360px;
+          height: 150px;
+          color: white;
+          margin-left: 10px;
+          margin-top: 50px;
+          .icon1Content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            background-color: #ffffff;
+            border-radius: 22.5px;
+          }
+
+          .iconDesc {
+            width: 310px;
+            margin-top: -8px;
+            margin-left: 15px;
+
+            .iconDescTitle {
+              font-size: 18px;
+            }
+            .iconDescDescContent {
+              font-size: 14px;
+            }
+          }
+        }
       }
     }
   }
