@@ -1,27 +1,27 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from 'next/image'
+import styles from './page.module.css'
 
 const data = {
-  title: "UPDATE",
-  titleDesc: "It starts with an upgrade",
+  title: 'UPDATE',
+  titleDesc: 'It starts with an upgrade',
   iconDescList: [
     {
-      imagePath: "/image/icon1.svg",
-      title: "Monitor",
-      desc: "Make your standard systems smart with Siphome. A simple installation or integration and we can start to monitor 24/7 to make sure your home is Siphome.",
+      imagePath: '/image/icon1.svg',
+      title: 'Monitor',
+      desc: 'Make your standard systems smart with Siphome. A simple installation or integration and we can start to monitor 24/7 to make sure your home is Siphome.',
     },
     {
-      imagePath: "/image/icon2.svg",
-      title: "Monitor",
-      desc: "Make your standard systems smart with Siphome. A simple installation or integration and we can start to monitor 24/7 to make sure your home is Siphome.",
+      imagePath: '/image/icon2.svg',
+      title: 'Monitor',
+      desc: 'Make your standard systems smart with Siphome. A simple installation or integration and we can start to monitor 24/7 to make sure your home is Siphome.',
     },
     {
-      imagePath: "/image/icon3.svg",
-      title: "Monitor",
-      desc: "Make your standard systems smart with Siphome. A simple installation or integration and we can start to monitor 24/7 to make sure your home is Siphome.",
+      imagePath: '/image/icon3.svg',
+      title: 'Monitor',
+      desc: 'Make your standard systems smart with Siphome. A simple installation or integration and we can start to monitor 24/7 to make sure your home is Siphome.',
     },
   ],
-};
+}
 
 export default function Home() {
   return (
@@ -31,6 +31,7 @@ export default function Home() {
           <div className={styles.title}>{data.title}</div>
           <div className={styles.titleDesc}>{data.titleDesc}</div>
         </section>
+
         <div className={styles.contentImage}>
           <Image
             className={styles.first}
@@ -90,11 +91,11 @@ export default function Home() {
                     <p className={styles.iconDescDescContent}>{item.desc}</p>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
